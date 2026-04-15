@@ -1,0 +1,177 @@
+<!-- <html>
+ <script src="basic.js"> </script>
+ <script    >
+    function add()
+    {
+        console.log("Htnl add function called");
+    let result=  addition( document.getElementById("txtnum1").value, document.getElementById("txtnum2").value);
+document.getElementById("txtresult").value= result;
+    }
+     function sub()
+    {
+        console.log("Htnl sub function called");
+    let resultsub=  substract( document.getElementById("txtnum3").value, document.getElementById("txtnum4").value);
+document.getElementById("txtresultsub").value= resultsub;
+    }
+
+         function multi()
+    {
+        console.log("Htnl sub function called");
+    let resultmulti=  multiply( document.getElementById("txtnum5").value, document.getElementById("txtnum6").value);
+document.getElementById("txtresultmulti").value= resultmulti;
+    }
+
+
+ </script>
+<body>
+<h2>
+    Welcome vivek
+</h2>
+<div>
+Number 1 <input type="text" id="txtnum1">
+Number 2 <input type="text" id="txtnum2">
+<input   type="button" id="btnAdd" value="Add" onclick="add()">
+Result <input  type="text" id="txtresult">
+
+
+</div>  
+ <div>
+Number 3 <input type="text" id="txtnum3">
+Number 4 <input type="text" id="txtnum4">
+<input   type="button" id="btnSub" value="Sub" onclick="sub()">
+Result <input  type="text" id="txtresultsub">
+
+
+</div>   
+</div>  
+ <div>
+Number 3 <input type="text" id="txtnum5">
+Number 4 <input type="text" id="txtnum6">
+<input   type="button" id="btnmulti" value="Multiply" onclick="multi()">
+Result <input  type="text" id="txtresultmulti">
+
+
+</div>   
+</body>
+</html> -->
+
+
+
+
+<html>
+      <style>
+    button {
+      background-color: #4CAF50; /* Green */
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 5px #2d6a31; /* Shadow for 3D look */
+      transition: all 0.1s ease-in-out;
+    }
+
+    /* When button is pressed */
+    button:active {
+      box-shadow: 0 2px #2d6a31; /* Smaller shadow */
+      transform: translateY(3px); /* Moves down slightly */
+    }
+  </style>
+ <script src="basic.js"> </script>
+ <script>
+    var FirstNumber;
+function pressedKey(number)
+{
+    if(number== " ")
+    {
+        document.getElementById("txtNumber").value= "";
+    }
+    else if(Number(number) <10 && Number(number)> -1){
+ document.getElementById("txtNumber").value += number;
+    }
+    if(number== "+")
+    {
+ FirstNumber= document.getElementById("txtNumber").value
+document.getElementById("txtNumber").value= "";
+    }
+    else if(number== "-")
+    {
+ FirstNumber= document.getElementById("txtNumber").value
+document.getElementById("txtNumber").value= "";
+    }
+
+    if(number == "=")
+    {
+    
+        document.getElementById("txtNumber").value = Number(FirstNumber) + Number(document.getElementById("txtNumber").value, ) ;
+        
+        
+    }
+
+ 
+}
+
+    function Operation(operator)
+    {
+     
+    let resulta=  operation( document.getElementById("txtnum1").value, document.getElementById("txtnum2").value, operator);
+    if(operator == "+"){
+        document.getElementById("txtresult").value= resulta;
+    }
+    else   if(operator == "-"){
+        document.getElementById("txtresult").value= resulta;
+    }
+    else   if(operator == "*"){
+        document.getElementById("txtresult").value= resulta;
+    }
+       
+    
+    }
+     
+ </script>
+ 
+<body>
+<h1>
+    Welcome vivek
+</h1>
+<div>
+
+Number 1 <input type="text" id="txtnum1">
+Number 2 <input type="text" id="txtnum2">
+<br><br>
+<input type="button" id="btnAdd" value="Add" onclick="Operation('+')">
+<input   type="button" id="btnSub" value="Sub" onclick="Operation('-')">
+<input   type="button" id="btnmulti" value="Multiply" onclick="Operation('*')">
+Result <input  type="text" id="txtresult">
+
+
+
+
+</div>   
+<br><br>
+<div>
+<input type="text" id="txtNumber">
+<br><br>
+<input   type="button" id="btn0" value="0" onclick="pressedKey(0)">
+<input   type="button" id="btn1" value="1" onclick="pressedKey(1)">
+<input   type="button" id="btn2" value="2" onclick="pressedKey(2)">
+<input   type="button" id="clear" value="clr" onclick="pressedKey(' ')">
+<br><br>
+<input   type="button" id="btn3" value="3" onclick="pressedKey(3)">
+<input   type="button" id="btn4" value="4" onclick="pressedKey(4)">
+<input   type="button" id="btn5" value="5" onclick="pressedKey(5)">
+<input   type="button" id="btnadd" value="+" onclick="pressedKey('+')">
+<input   type="button" id="btnsub" value="-" onclick="pressedKey('-')">
+<br><br>
+<input   type="button" id="btn6" value="6" onclick="pressedKey(6)">
+<input   type="button" id="btn7" value="7" onclick="pressedKey(7)">
+<input   type="button" id="btn8" value="8" onclick="pressedKey(8)">
+<input   type="button" id="btn9" value="9" onclick="pressedKey(9)">
+<input   type="button" id="btnequals" value="=" onclick="pressedKey('=')">
+
+
+
+</div>
+</body>
+</html>
